@@ -1,6 +1,6 @@
 import type { Task } from "../types/types";
 
-const BASE = "http://localhost:5042/api/tasks";
+const BASE = import.meta.env.VITE_DB_URL_BASE;
 
 export async function fetchTasks(): Promise<Task[]> {
   const res = await fetch(BASE);
